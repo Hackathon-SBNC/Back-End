@@ -5,3 +5,4 @@ from .nota import Nota
 from .disciplina import Disciplina
 from .turma import Turma
 from .aluno import Aluno
+from .trimestre import Trimestre

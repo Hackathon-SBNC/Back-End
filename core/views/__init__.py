@@ -5,3 +5,4 @@ from .nota import NotaViewSet
 from .disciplina import DisciplinaViewSet
 from .turma import TurmaViewSet
 from .aluno import AlunoViewSet
+from .trimestre import TrimestreViewSet

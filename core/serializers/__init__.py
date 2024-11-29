@@ -5,3 +5,4 @@ from .nota import NotaSerializer
 from .turma import TurmaSerializer
 from .disciplina import DisciplinaSerializer
 from .aluno import AlunoSerializer
+from .trimestre import TrimestreSerializer
