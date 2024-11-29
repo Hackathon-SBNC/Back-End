@@ -7,3 +7,4 @@ from .turma import Turma
 from .aluno import Aluno
 from .trimestre import Trimestre
 from .ocorrencia import Ocorrencia
+from .responsavel import Responsavel

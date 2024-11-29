@@ -7,3 +7,4 @@ from .turma import TurmaViewSet
 from .aluno import AlunoViewSet
 from .trimestre import TrimestreViewSet
 from .ocorrencia import OcorrenciaViewSet
+from .responsavel import ResponsavelViewSet

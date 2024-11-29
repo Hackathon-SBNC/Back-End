@@ -7,3 +7,4 @@ from .disciplina import DisciplinaSerializer
 from .aluno import AlunoSerializer
 from .trimestre import TrimestreSerializer
 from .ocorrencia import OcorrenciaSerializer
+from .responsavel import ResponsavelSerializer
