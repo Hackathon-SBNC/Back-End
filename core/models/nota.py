@@ -2,6 +2,8 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 from .disciplina import Disciplina
+from .trimestre import Trimestre
+from .aluno import Aluno
 
 
 class Nota(models.Model):
@@ -13,10 +15,12 @@ class Nota(models.Model):
             MinValueValidator(0)
         ])      
     disciplina = models.ForeignKey(Disciplina, on_delete=models.PROTECT)
+    aluno = models.ForeignKey(Aluno, on_delete=models.PROTECT)
+    trimestre = models.ForeignKey(Trimestre, on_delete=models.PROTECT)
 
     class Meta:
         verbose_name = "Nota"
         verbose_name_plural = "Notas"
 
     def __str__(self):
-        return f'{self.nota} - {self.disciplina.nome}'
+        return f'{self.nota} - {self.disciplina.nome} - {self.aluno.nome} - {self.trimestre}'
