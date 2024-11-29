@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+from .disciplina import Disciplina
+
 
 class Nota(models.Model):
     nota = models.DecimalField(
@@ -10,10 +12,11 @@ class Nota(models.Model):
             MaxValueValidator(10),
             MinValueValidator(0)
         ])      
+    disciplina = models.ForeignKey(Disciplina, on_delete=models.PROTECT)
 
     class Meta:
         verbose_name = "Nota"
         verbose_name_plural = "Notas"
 
     def __str__(self):
-        return str(self.nota)
+        return f'{self.nota} - {self.disciplina.nome}'
