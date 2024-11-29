@@ -59,3 +59,5 @@ admin.site.register(models.Disciplina)
 admin.site.register(models.Turma)
 admin.site.register(models.Aluno)
 admin.site.register(models.Trimestre)
+admin.site.register(models.Ocorrencia)
+    
