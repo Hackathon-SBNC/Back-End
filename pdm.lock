@@ -5,7 +5,7 @@
 groups = ["default", "dev", "format"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:1c5352d3bc9084e827218cc9ab0cfb5b119ef7a139d68f1459e078d06bc58e06"
+content_hash = "sha256:0451dee082a15b4b4bc874fe703cd387f9d326bb39e577a7b366fddb88c56cea"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -564,6 +564,17 @@ groups = ["default"]
 files = [
     {file = "filelock-3.16.1-py3-none-any.whl", hash = "sha256:2082e5703d51fbf98ea75855d9d5527e33d8ff23099bec374a134febee6946b0"},
     {file = "filelock-3.16.1.tar.gz", hash = "sha256:c249fbfcd5db47e5e2d6d62198e565475ee65e4831e2561c8e313fa7eb961435"},
+]
+
+[[package]]
+name = "graphviz"
+version = "0.20.3"
+requires_python = ">=3.8"
+summary = "Simple Python interface for Graphviz"
+groups = ["default"]
+files = [
+    {file = "graphviz-0.20.3-py3-none-any.whl", hash = "sha256:81f848f2904515d8cd359cc611faba817598d2feaac4027b266aa3eda7b3dde5"},
+    {file = "graphviz-0.20.3.zip", hash = "sha256:09d6bc81e6a9fa392e7ba52135a9d49f1ed62526f96499325930e87ca1b5925d"},
 ]
 
 [[package]]
