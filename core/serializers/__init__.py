@@ -4,3 +4,4 @@ from .observacao import ObservacaoSerializer
 from .nota import NotaSerializer
 from .turma import TurmaSerializer
 from .disciplina import DisciplinaSerializer
+from .aluno import AlunoSerializer
