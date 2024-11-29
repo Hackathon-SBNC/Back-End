@@ -1,4 +1,3 @@
-from yaml import serialize
 from rest_framework.viewsets import ModelViewSet
 
 from core.models import Observacao
