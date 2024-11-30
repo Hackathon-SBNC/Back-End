@@ -10,5 +10,5 @@ class AlunoViewSet(ModelViewSet):
     queryset = Aluno.objects.all()
     serializer_class = AlunoSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ["turma__curso__descricao", "turma__ano"]
+    filterset_fields = ["turma__id", "turma__curso__id"]
     search_fields = ["nome", "matricula"]
