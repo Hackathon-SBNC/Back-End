@@ -7,3 +7,4 @@ class ObservacaoSerializer(ModelSerializer):
     class Meta:
         model = Observacao
         fields = "__all__"
+        depth = 1
