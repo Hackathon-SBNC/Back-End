@@ -7,4 +7,4 @@ class AlunoSerializer(ModelSerializer):
     class Meta:
         model = Aluno
         fields = "__all__"
-        depth = 1
+        depth = 2
