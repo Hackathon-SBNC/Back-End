@@ -7,3 +7,4 @@ class ResponsavelSerializer(ModelSerializer):
     class Meta:
         model = Responsavel
         fields = "__all__"
+        depth = 1

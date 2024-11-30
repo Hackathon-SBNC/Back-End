@@ -753,28 +753,6 @@ files = [
 ]
 
 [[package]]
-name = "passage-identity"
-version = "2.5.1"
-requires_python = ">=3.7"
-summary = "Passkey Complete for Python - Integrate into your Python API or service to enable a completely passwordless standalone auth solution with Passage by 1Password"
-groups = ["default"]
-dependencies = [
-    "aenum",
-    "cryptography",
-    "importlib-metadata>=1.0; python_version < \"3.12\"",
-    "pydantic",
-    "pyjwt",
-    "python-dateutil",
-    "requests",
-    "typing-extensions>=4.7.1",
-    "urllib3<2.1.0,>=1.25.3",
-]
-files = [
-    {file = "passage_identity-2.5.1-py3-none-any.whl", hash = "sha256:3e4965596dc9bdf8d22fee7c893086e74736dfb217090b6bae8a2af79f20fd6c"},
-    {file = "passage_identity-2.5.1.tar.gz", hash = "sha256:d807045a438ffb96e9b82e1a9a7c7c84fbd78bb8c40470e372d5ccd526077362"},
-]
-
-[[package]]
 name = "pathspec"
 version = "0.12.1"
 requires_python = ">=3.8"
