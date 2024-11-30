@@ -1,9 +1,16 @@
+from rest_framework.permissions import IsAuthenticated
+
+from datetime import timedelta
 import os
 from datetime import timedelta
 from pathlib import Path
 
 import dj_database_url
 from dotenv import load_dotenv
+
+
+permission_classes = [IsAuthenticated]  
+
 
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -38,6 +45,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "rest_framework",
     "core",
+    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
@@ -145,11 +153,20 @@ SPECTACULAR_SETTINGS = {
 AUTH_USER_MODEL = "core.User"
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly",),  # Permissões através dos grupos do Django
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": [
+           "rest_framework.permissions.DjangoModelPermissions",
+    ],  # Permissões através dos grupos do Django
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "PAGE_SIZE": 40,
 }
 
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
 
 print(f"{MODE = } \n{MEDIA_URL = } \n{DATABASES = }")

@@ -26,6 +26,7 @@ dependencies = [
     'uvicorn>=0.29.0',
     'whitenoise[brotli]>=6.6.0',
     "graphviz>=0.20.3",
+    "djangorestframework-simplejwt>=5.3.1",
 ]
 requires-python = ">=3.10"
 license = { text = "MIT" }
