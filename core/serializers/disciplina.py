@@ -7,3 +7,4 @@ class DisciplinaSerializer(ModelSerializer):
     class Meta:
         model = Disciplina
         fields = "__all__"
+        depth = 1

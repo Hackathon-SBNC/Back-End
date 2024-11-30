@@ -7,3 +7,4 @@ class TrimestreSerializer(ModelSerializer):
     class Meta:
         model = Trimestre
         fields = "__all__"
+        depth = 1
