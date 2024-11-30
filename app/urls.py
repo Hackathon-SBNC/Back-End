@@ -11,7 +11,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from rest_framework.routers import DefaultRouter
 
-from core.views import UserViewSet, CursoViewSet, ObservacaoViewSet, NotaViewSet, TurmaViewSet, DisciplinaViewSet, AlunoViewSet, TrimestreViewSet, OcorrenciaViewSet, ResponsavelViewSet
+from core.views import UserViewSet, CursoViewSet, ObservacaoViewSet, NotaViewSet, TurmaViewSet, DisciplinaViewSet, AlunoViewSet, TrimestreViewSet, OcorrenciaViewSet, ResponsavelViewSet, ProfessorViewSet
 
 
 router = DefaultRouter()
@@ -26,6 +26,7 @@ router.register(r"ocorrencias", OcorrenciaViewSet, basename="ocorrencias")
 router.register(r"responsaveis", ResponsavelViewSet, basename="responsaveis")
 router.register(r"trimestres", TrimestreViewSet, basename="trimestres")
 router.register(r"turmas", TurmaViewSet, basename="turmas")
+router.register(r"professores", ProfessorViewSet, basename="professores")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
