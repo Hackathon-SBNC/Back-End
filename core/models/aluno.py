@@ -4,7 +4,6 @@ from django.core.validators import MinLengthValidator
 from .turma import Turma
 from .responsavel import Responsavel
 
-
 class Aluno(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()

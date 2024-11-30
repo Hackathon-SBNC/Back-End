@@ -6,9 +6,13 @@ from drf_spectacular.views import (
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
+
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
 from rest_framework.routers import DefaultRouter
 
 from core.views import UserViewSet, CursoViewSet, ObservacaoViewSet, NotaViewSet, TurmaViewSet, DisciplinaViewSet, AlunoViewSet, TrimestreViewSet, OcorrenciaViewSet, ResponsavelViewSet
+
 
 router = DefaultRouter()
 
@@ -39,4 +43,7 @@ urlpatterns = [
     ),
     # API
     path("api/", include(router.urls)),
+
+    path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
 ]

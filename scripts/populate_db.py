@@ -113,12 +113,12 @@ cur.executemany('''
 cur.execute('SELECT id FROM core_user')
 user_ids = [row[0] for row in cur.fetchall()]
 
-# user_group = []
-# for user_id in user_ids:
-#     id_user = user_id
-#     id_group = random.randint(1, 3)
-#     user_group.append((id_user, id_group))
-# cur.executemany('INSERT INTO core_user_groups (user_id, group_id) VALUES (?, ?)', user_group)
+user_group = []
+for user_id in user_ids:
+    id_user = user_id
+    id_group = random.randint(1, 3)
+    user_group.append((id_user, id_group))
+cur.executemany('INSERT INTO core_user_groups (user_id, group_id) VALUES (?, ?)', user_group)
 
 # ======== FINALIZAÇÃO ========
 conn.commit()

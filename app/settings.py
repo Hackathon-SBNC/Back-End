@@ -5,6 +5,11 @@ from pathlib import Path
 import dj_database_url
 from dotenv import load_dotenv
 
+from rest_framework.permissions import IsAuthenticated
+
+permission_classes = [IsAuthenticated]  
+
+
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
 
@@ -38,6 +43,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "rest_framework",
     "core",
+    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
@@ -145,7 +151,12 @@ SPECTACULAR_SETTINGS = {
 AUTH_USER_MODEL = "core.User"
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly",),  # Permissões através dos grupos do Django
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],  # Permissões através dos grupos do Django
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "PAGE_SIZE": 40,

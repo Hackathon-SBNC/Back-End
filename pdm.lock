@@ -5,7 +5,7 @@
 groups = ["default", "dev", "format"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:0451dee082a15b4b4bc874fe703cd387f9d326bb39e577a7b366fddb88c56cea"
+content_hash = "sha256:7d5355d04fb3740a22560aa23a1e01e846eeb7bd0b30c0fb6d81ec0e4cb6966b"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -536,6 +536,22 @@ files = [
 ]
 
 [[package]]
+name = "djangorestframework-simplejwt"
+version = "5.3.1"
+requires_python = ">=3.8"
+summary = "A minimal JSON Web Token authentication plugin for Django REST Framework"
+groups = ["default"]
+dependencies = [
+    "django>=3.2",
+    "djangorestframework>=3.12",
+    "pyjwt<3,>=1.7.1",
+]
+files = [
+    {file = "djangorestframework_simplejwt-5.3.1-py3-none-any.whl", hash = "sha256:381bc966aa46913905629d472cd72ad45faa265509764e20ffd440164c88d220"},
+    {file = "djangorestframework_simplejwt-5.3.1.tar.gz", hash = "sha256:6c4bd37537440bc439564ebf7d6085e74c5411485197073f508ebdfa34bc9fae"},
+]
+
+[[package]]
 name = "drf-spectacular"
 version = "0.27.2"
 requires_python = ">=3.7"
@@ -750,6 +766,28 @@ groups = ["default", "dev", "format"]
 files = [
     {file = "packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124"},
     {file = "packaging-24.1.tar.gz", hash = "sha256:026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"},
+]
+
+[[package]]
+name = "passage-identity"
+version = "2.5.1"
+requires_python = ">=3.7"
+summary = "Passkey Complete for Python - Integrate into your Python API or service to enable a completely passwordless standalone auth solution with Passage by 1Password"
+groups = ["default"]
+dependencies = [
+    "aenum",
+    "cryptography",
+    "importlib-metadata>=1.0; python_version < \"3.12\"",
+    "pydantic",
+    "pyjwt",
+    "python-dateutil",
+    "requests",
+    "typing-extensions>=4.7.1",
+    "urllib3<2.1.0,>=1.25.3",
+]
+files = [
+    {file = "passage_identity-2.5.1-py3-none-any.whl", hash = "sha256:3e4965596dc9bdf8d22fee7c893086e74736dfb217090b6bae8a2af79f20fd6c"},
+    {file = "passage_identity-2.5.1.tar.gz", hash = "sha256:d807045a438ffb96e9b82e1a9a7c7c84fbd78bb8c40470e372d5ccd526077362"},
 ]
 
 [[package]]
