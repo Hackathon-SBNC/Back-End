@@ -11,12 +11,8 @@ try:
 
     # Excluir os dados da tabela core_user
     cur.execute('DELETE FROM core_user;')
-
-    tabelas = ['user_group', 'turma', 'responsavel', 'groups']
-
-    for tabela in tabelas:
-        cur.execute(f'DROP TABLE IF EXISTS {tabela};')
-        print(f"Tabela '{tabela}' excluída com sucesso.")
+    cur.execute('DELETE FROM core_user_groups;')
+    cur.execute('DELETE FROM django_admin_log;')
 
     # Confirmar as alterações
     conn.commit()
