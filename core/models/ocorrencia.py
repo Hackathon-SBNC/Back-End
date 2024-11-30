@@ -5,7 +5,7 @@ from .trimestre import Trimestre
 
 class Ocorrencia(models.Model):
     descricao = models.TextField()
-    aluno = models.ForeignKey(Aluno, on_delete=models.PROTECT)
+    aluno = models.ForeignKey(Aluno, on_delete=models.PROTECT,related_name="ocorrencias")
     trimestre = models.ForeignKey(Trimestre, on_delete=models.PROTECT)
 
 
