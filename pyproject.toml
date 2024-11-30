@@ -60,6 +60,7 @@ dumpdata = "python manage.py dumpdata --indent 2"
 cria_api = "python ./scripts/cria_api.py {args}"
 delete_user = "python ./scripts/exclui_user.py"
 populate = "python scripts/populate_db.py"
+professor = "python scripts/professor.py"
 
 [tool.black]
 line-length = 120
