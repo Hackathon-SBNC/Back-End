@@ -1,6 +1,5 @@
 import sqlite3
 import random
-import string
 from hashlib import sha256
 
 # Conectar ao banco de dados
